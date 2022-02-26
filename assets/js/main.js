@@ -41,16 +41,15 @@ window.addEventListener('scroll', scrollHeader)
 let newSwiper = new Swiper(".new-swiper", {
     spaceBetween: 24,
     loop: 'true',
-    slidesPerView: "auto",
+    slidesPerView: 'auto',
     centeredSlides: true,
-    
     pagination: {
       el: ".swiper-pagination",
-      dynamicBullets: true,
+      dynamicbullets: true,
     },
     breakpoints: {
         992: {
-          spaceBetween: 80,
+        // spaceBetween: 80,
         },
     },
 });
@@ -77,9 +76,9 @@ window.addEventListener('scroll', scrollActive)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 function scrollUp(){
-  const scrollUp = document.getElementById('scroll-up');
-  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 350) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
@@ -115,15 +114,15 @@ themeButton.addEventListener('click', () => {
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 const sr = ScrollReveal({
-  origin: 'top',
-  distance: '60px',
-  duration: 2500,
-  delay: 400,
-  // reset: true
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay:400,
+    //reset: true
 })
 
 sr.reveal(`.home__img, .new__container, .footer__container`)
 sr.reveal(`.home__data`, {delay: 500})
-sr.reveal(`.giving__content, .gift__card`,{interval: 100})
-sr.reveal(`.celebrate__data, .message__form, .footer__img1`,{origin: 'left'})
-sr.reveal(`.celebrate__img, .message__img, .footer__img2`,{origin: 'right'})
+sr.reveal(`.giving__content, .gift__card`, {interval: 100})
+sr.reveal(`.celebrate__data, .message__form, .footer__img1`, {origin: 'left'}) 
+sr.reveal(`.celebrate__img, .message__img, .footer__img2`, {origin: 'right'}) 
